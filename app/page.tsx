@@ -1,101 +1,134 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  IconBrandGithubFilled,
+  IconBrandLinkedinFilled,
+} from "@tabler/icons-react";
+
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-space-grotesk)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-space-grotesk)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main className="flex min-h-screen flex-col p-6 md:p-24 max-w-4xl mx-auto">
+      {/* Header Section */}
+      <header className="mb-16">
+        <h1 className="text-4xl font-bold mb-2">Wilson Ler</h1>
+        <p className="text-lg text-gray-600 dark:text-gray-400">
+          San Francisco, CA
+        </p>
+        <p className="text-xl mt-4">
+          Technical Co-founder of Beloga, former Engineering Manager at
+          Constructor
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        {/* Social Links */}
+        <div className="flex gap-4 mt-4">
+          <Button
+            variant="outline"
+            asChild
+            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <Link href="https://github.com/lws803">
+              <IconBrandGithubFilled className="mr-2 h-4 w-4" /> GitHub
+            </Link>
+          </Button>
+          <Button
+            variant="outline"
+            asChild
+            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
           >
-            Read our docs
-          </a>
+            <Link href="https://linkedin.com/in/wilsonler">
+              <IconBrandLinkedinFilled className="mr-2 h-4 w-4" /> LinkedIn
+            </Link>
+          </Button>
+          <Button
+            variant="outline"
+            asChild
+            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
+          >
+            <Link href="/resume.pdf" target="_blank">
+              Resume
+            </Link>
+          </Button>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </header>
+
+      {/* Bio Section */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4">About</h2>
+        <p className="text-gray-600 dark:text-gray-400">
+          Building AI-powered tools for knowledge workers. Passionate about
+          leveraging technology to solve real-world problems.
+        </p>
+      </section>
+
+      {/* Work Experience */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-xl font-semibold">Technical Co-founder</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Beloga • 2023 - Present
+            </p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Engineering Manager</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Constructor • 2021 - 2023
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4">Education</h2>
+        <div>
+          <h3 className="text-xl font-semibold">
+            National University of Singapore
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400">
+            Bachelor&apos;s in Computer Science
+          </p>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4">Projects</h2>
+        <div className="grid gap-6">
+          <div>
+            <h3 className="text-xl font-semibold">Beloga</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              AI-powered tools for knowledge workers
+            </p>
+          </div>
+          {/* Add more projects as needed */}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4">FAQ</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-xl font-semibold">What am I working on?</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              Currently building AI-powered tools at Beloga to enhance
+              productivity for knowledge workers.
+            </p>
+          </div>
+          {/* Add more FAQ items as needed */}
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
+        <Button asChild>
+          <Link href="mailto:wilson@beloga.io">Contact Me</Link>
+        </Button>
+      </section>
+    </main>
   );
 }
