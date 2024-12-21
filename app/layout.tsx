@@ -10,7 +10,8 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Wilson Ler | Software Engineer & Co-founder",
   description:
-    "Technical Co-founder of Beloga, former Engineering Manager at Constructor. Building AI-powered tools for knowledge workers.",
+    "Technical Co-founder of Beloga, former Engineering Manager at Constructor. " +
+    "Building AI-powered tools for knowledge workers.",
 };
 
 export default function RootLayout({
