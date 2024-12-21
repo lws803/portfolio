@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
+
 import "./globals.css";
+import { CSPostHogProvider } from "./providers";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -21,11 +23,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${spaceGrotesk.variable} antialiased bg-white text-black dark:bg-black dark:text-white`}
-      >
-        {children}
-      </body>
+      <CSPostHogProvider>
+        <body
+          className={`${spaceGrotesk.variable} antialiased bg-white text-black dark:bg-black dark:text-white`}
+        >
+          {children}
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }
