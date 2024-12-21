@@ -17,8 +17,6 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
-// TODO: Also the AR VR project stuff
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col p-6 md:p-24 max-w-4xl mx-auto">
@@ -172,7 +170,7 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-semibold">Stanford University</h3>
             <p className="text-gray-600 dark:text-gray-400">
-              Visiting Student • 2019
+              Exchange Student • 2019
             </p>
             <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400">
               <li>Completed CS229 Machine Learning course</li>
