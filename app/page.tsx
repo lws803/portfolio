@@ -7,6 +7,11 @@ import {
 
 import { Button } from "@/components/ui/button";
 
+// TODO: Maybe add more stuff that makes me look ambitious, e.g. a YouTube embed of me
+// landing a submarine to pick up balls
+// TODO: Also the AR VR project stuff
+// TODO: Include an FAQ section
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col p-6 md:p-24 max-w-4xl mx-auto">
@@ -23,29 +28,17 @@ export default function Home() {
 
         {/* Social Links */}
         <div className="flex gap-4 mt-4">
-          <Button
-            variant="outline"
-            asChild
-            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-          >
-            <Link href="https://github.com/lws803">
+          <Button variant="outline" asChild>
+            <Link href="https://github.com/lws803" target="_blank">
               <IconBrandGithubFilled className="mr-2 h-4 w-4" /> GitHub
             </Link>
           </Button>
-          <Button
-            variant="outline"
-            asChild
-            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-          >
-            <Link href="https://linkedin.com/in/wilsonler">
+          <Button variant="outline" asChild>
+            <Link href="https://linkedin.com/in/wilsonler" target="_blank">
               <IconBrandLinkedinFilled className="mr-2 h-4 w-4" /> LinkedIn
             </Link>
           </Button>
-          <Button
-            variant="outline"
-            asChild
-            className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
-          >
+          <Button variant="outline" asChild>
             <Link href="/resume.pdf" target="_blank">
               <IconFileDownload className="mr-2 h-4 w-4" /> Resume
             </Link>
@@ -55,7 +48,7 @@ export default function Home() {
 
       {/* Bio Section */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-4">About</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">About</h2>
         <p className="text-gray-600 dark:text-gray-400">
           Technical Co-founder of Beloga, building a thinking and functioning AI
           second brain for knowledge-intensive tasks. Experienced in natural
@@ -68,7 +61,9 @@ export default function Home() {
 
       {/* Work Experience */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">
+          Work Experience
+        </h2>
         <div className="space-y-8">
           <div>
             <h3 className="text-xl font-semibold">Technical Co-founder</h3>
@@ -132,7 +127,7 @@ export default function Home() {
 
       {/* Education */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-4">Education</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Education</h2>
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-semibold">Stanford University</h3>
@@ -167,7 +162,7 @@ export default function Home() {
 
       {/* Projects */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-4">Projects</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Projects</h2>
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-semibold">
@@ -197,6 +192,85 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-semibold">
               <Link
+                href="https://github.com/lws803/next-use-warmroutes"
+                target="_blank"
+                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+              >
+                next-use-warmroutes
+                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+              </Link>
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">May 2023</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+              <li>
+                Built a Next.js hook to control serverless/SSR route warm-up
+                timing
+              </li>
+              <li>
+                Helps developers prevent cold starts by pre-warming routes based
+                on user navigation patterns
+              </li>
+              <li>Published as an npm package with 6 stars on GitHub</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">
+              <Link
+                href="https://github.com/lws803/soul"
+                target="_blank"
+                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+              >
+                Soul
+                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+              </Link>
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">
+              January 2023
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+              <li>
+                Built a social media authentication and relationships service
+                using NestJS and MySQL
+              </li>
+              <li>
+                Implemented user connections and reputation system with full
+                test coverage
+              </li>
+              <li>Achieved 17 stars on GitHub</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">
+              <Link
+                href="https://github.com/lws803/Crime-detect"
+                target="_blank"
+                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+              >
+                Crime-detect
+                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+              </Link>
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">
+              January 2019
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+              <li>
+                Built a real-time surveillance system to detect weapons and
+                aggressive behavior using computer vision
+              </li>
+              <li>
+                Implemented weapon detection using ML and motion analysis with
+                Optical Flow
+              </li>
+              <li>
+                Achieved 18 stars and 10 forks on GitHub, developed during
+                HackAndRoll2019
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">
+              <Link
                 href="https://github.com/lws803/BLE-jammer"
                 target="_blank"
                 className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
@@ -221,7 +295,7 @@ export default function Home() {
 
       {/* Skills */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-4">Skills</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Skills</h2>
         <div className="space-y-4">
           <div>
             <h3 className="text-xl font-semibold">Technologies</h3>
@@ -242,7 +316,7 @@ export default function Home() {
 
       {/* Contact CTA */}
       <section className="mb-16">
-        <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Get in Touch</h2>
         <div className="space-y-4">
           <Button asChild>
             <Link href="mailto:lws803@gmail.com">Contact Me</Link>
