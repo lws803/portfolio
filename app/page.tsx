@@ -5,42 +5,72 @@ import {
   IconFileDownload,
   IconExternalLink,
 } from "@tabler/icons-react";
+import Image from "next/image";
+import { YouTubeEmbed } from "@next/third-parties/google";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-// TODO: Maybe add more stuff that makes me look ambitious, e.g. a YouTube embed of me
-// landing a submarine to pick up balls
 // TODO: Also the AR VR project stuff
-// TODO: Include an FAQ section
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col p-6 md:p-24 max-w-4xl mx-auto">
       {/* Header Section */}
       <header className="mb-16">
-        <h1 className="text-4xl font-bold mb-2">Wilson Ler</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400">
-          San Francisco, California, United States
-        </p>
-        <p className="text-xl mt-4">
-          Technical Co-founder at Beloga, former Engineering Manager at
-          Constructor
-        </p>
+        <div className="flex flex-col">
+          <div className="flex items-start gap-6 mb-4">
+            <Image
+              src="/square.png"
+              alt="Wilson Ler"
+              width={124}
+              height={124}
+              className="rounded-lg w-24 h-24 md:w-[124px] md:h-[124px]"
+              priority
+            />
+            <div>
+              <h1 className="text-4xl font-bold mb-2">Wilson Ler</h1>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Toronto, Ontario
+              </p>
+              <p className="text-xl mt-4 hidden sm:block">
+                Technical Co-founder at Beloga, former Engineering Manager at
+                Constructor
+              </p>
+            </div>
+          </div>
+          <p className="text-xl mt-4 sm:hidden">
+            Technical Co-founder at Beloga,
+            <br />
+            former Engineering Manager at Constructor
+          </p>
+        </div>
 
         {/* Social Links */}
-        <div className="flex gap-4 mt-4">
-          <Button variant="outline" asChild>
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <Button
+            variant="outline"
+            asChild
+            className="w-full sm:w-auto justify-center"
+          >
             <Link href="https://github.com/lws803" target="_blank">
               <IconBrandGithubFilled className="mr-2 h-4 w-4" /> GitHub
             </Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button
+            variant="outline"
+            asChild
+            className="w-full sm:w-auto justify-center"
+          >
             <Link href="https://linkedin.com/in/wilsonler" target="_blank">
               <IconBrandLinkedinFilled className="mr-2 h-4 w-4" /> LinkedIn
             </Link>
           </Button>
-          <Button variant="outline" asChild>
+          <Button
+            variant="outline"
+            asChild
+            className="w-full sm:w-auto justify-center"
+          >
             <Link href="/resume.pdf" target="_blank">
               <IconFileDownload className="mr-2 h-4 w-4" /> Resume
             </Link>
@@ -52,12 +82,12 @@ export default function Home() {
       <section className="mb-16">
         <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">About</h2>
         <p className="text-gray-600 dark:text-gray-400">
-          Technical Co-founder of Beloga, building a thinking and functioning AI
-          second brain for knowledge-intensive tasks. Experienced in natural
-          language processing (NLP), retrieval-augmented generation (RAG), and
-          full-stack development. Former Engineering Manager at Constructor with
-          a track record of leading successful teams and delivering impactful
-          projects.
+          Technical Co-founder of Beloga and On-Deck Fellow (ODF23), building a
+          thinking and functioning AI second brain for knowledge-intensive
+          tasks. Experienced in natural language processing (NLP),
+          retrieval-augmented generation (RAG), and full-stack development.
+          Former Engineering Manager at Constructor with a track record of
+          leading successful teams and delivering impactful projects.
         </p>
       </section>
 
@@ -70,7 +100,7 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-semibold">Technical Co-founder</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-2">
-              Beloga • February 2024 - Present
+              Beloga • February 2024 - Present • Toronto, Ontario (On-site)
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
               <li>
@@ -89,7 +119,8 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-semibold">Engineering Manager</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-2">
-              Constructor • August 2021 - February 2024
+              Constructor • August 2021 - February 2024 • San Francisco,
+              California (Remote)
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
               <li>
@@ -109,7 +140,8 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-semibold">Software Engineer</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-2">
-              Constructor • August 2019 - August 2021
+              Constructor • August 2019 - August 2021 • San Francisco,
+              California (On-site)
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
               <li>
@@ -156,6 +188,69 @@ export default function Home() {
               <li>
                 Focus areas: Information Retrieval, Natural Language Processing
                 (NLP)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Competitions */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Competitions</h2>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-xl font-semibold">RobotX Maritime Challenge</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              1st Place • December 2018 • Hawaii, USA
+            </p>
+            <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400">
+              <li>
+                International autonomous maritime robotics competition by
+                Robonation
+              </li>
+              <li>
+                Led the software team in developing autonomous navigation and
+                perception systems
+              </li>
+              <li>
+                Designed and built Autonomous Surface Systems to navigate
+                through complex tasks
+              </li>
+              <li>
+                Competed against teams from around the world in real-world
+                maritime scenarios
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">RoboSub Competition</h3>
+            <p className="text-gray-600 dark:text-gray-400">
+              2nd Place • July 2018 • San Diego, USA
+            </p>
+            <div className="mt-4 max-w-lg">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                Watch our autonomous submarine pick up golf balls underwater in
+                a small bin using computer vision and precise controls.
+              </p>
+              <div className="relative mb-6">
+                <YouTubeEmbed videoid="8sUCNCQCBGI" />
+              </div>
+            </div>
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
+              <li>
+                International underwater robotics competition by Robonation
+              </li>
+              <li>
+                Developed computer vision and control systems for underwater
+                navigation
+              </li>
+              <li>
+                Built an Autonomous Underwater Vehicle (AUV) capable of
+                completing complex tasks
+              </li>
+              <li>
+                Successfully navigated through underwater challenges mimicking
+                real research scenarios
               </li>
             </ul>
           </div>
@@ -334,7 +429,7 @@ export default function Home() {
                   target="_blank"
                   className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
                 >
-                  Bluetooth Low Energy Jammer
+                  BLE Jammer
                   <IconBrandGithubFilled className="ml-2 h-4 w-4" />
                 </Link>
               </CardTitle>
@@ -350,6 +445,38 @@ export default function Home() {
                 </li>
                 <li>Achieved 170 stars on GitHub</li>
                 <li>Was able to jam up to 100m of BLE communications</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://github.com/lws803/cs4240-grp8"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  SPAR - AR Physics Lab
+                  <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">2021</p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Built an AR mobile app for visualizing light physics
+                  experiments
+                </li>
+                <li>
+                  Implemented realistic light physics simulations and
+                  object-tracking
+                </li>
+                <li>
+                  Developed using Unity and C# to create interactive virtual lab
+                  experiences
+                </li>
               </ul>
             </CardContent>
           </Card>
@@ -384,9 +511,6 @@ export default function Home() {
           <Button asChild>
             <Link href="mailto:lws803@gmail.com">Contact Me</Link>
           </Button>
-          <p className="text-gray-600 dark:text-gray-400">
-            Phone: (226) 280-2518
-          </p>
         </div>
       </section>
     </main>
