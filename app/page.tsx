@@ -3,9 +3,11 @@ import {
   IconBrandGithubFilled,
   IconBrandLinkedinFilled,
   IconFileDownload,
+  IconExternalLink,
 } from "@tabler/icons-react";
 
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 // TODO: Maybe add more stuff that makes me look ambitious, e.g. a YouTube embed of me
 // landing a submarine to pick up balls
@@ -163,133 +165,194 @@ export default function Home() {
       {/* Projects */}
       <section className="mb-16">
         <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Projects</h2>
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-xl font-semibold">
-              <Link
-                href="https://github.com/lws803/gigachadgpt"
-                target="_blank"
-                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
-              >
-                GigaChadGPT
-                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
-              </Link>
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
-              December 2023
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>
-                Developed a ChatGPT-based persona through prompt engineering
-              </li>
-              <li>
-                Created an engaging conversational AI for fitness and lifestyle
-                advice
-              </li>
-              <li>Achieved 50+ DAUs on the platform</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">
-              <Link
-                href="https://github.com/lws803/next-use-warmroutes"
-                target="_blank"
-                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
-              >
-                next-use-warmroutes
-                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
-              </Link>
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">May 2023</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>
-                Built a Next.js hook to control serverless/SSR route warm-up
-                timing
-              </li>
-              <li>
-                Helps developers prevent cold starts by pre-warming routes based
-                on user navigation patterns
-              </li>
-              <li>Published as an npm package with 6 stars on GitHub</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">
-              <Link
-                href="https://github.com/lws803/soul"
-                target="_blank"
-                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
-              >
-                Soul
-                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
-              </Link>
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
-              January 2023
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>
-                Built a social media authentication and relationships service
-                using NestJS and MySQL
-              </li>
-              <li>
-                Implemented user connections and reputation system with full
-                test coverage
-              </li>
-              <li>Achieved 17 stars on GitHub</li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">
-              <Link
-                href="https://github.com/lws803/Crime-detect"
-                target="_blank"
-                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
-              >
-                Crime-detect
-                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
-              </Link>
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
-              January 2019
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>
-                Built a real-time surveillance system to detect weapons and
-                aggressive behavior using computer vision
-              </li>
-              <li>
-                Implemented weapon detection using ML and motion analysis with
-                Optical Flow
-              </li>
-              <li>
-                Achieved 18 stars and 10 forks on GitHub, developed during
-                HackAndRoll2019
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold">
-              <Link
-                href="https://github.com/lws803/BLE-jammer"
-                target="_blank"
-                className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
-              >
-                Bluetooth Low Energy Jammer
-                <IconBrandGithubFilled className="ml-2 h-4 w-4" />
-              </Link>
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
-              December 2022
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>
-                Built a BLE jammer using NRF240L+ modules and Maple Mini (STM32)
-              </li>
-              <li>Achieved 170 stars on GitHub</li>
-              <li>Was able to jam up to 100m of BLE communications</li>
-            </ul>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://summarize.beloga.xyz"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  Agentic Summarizer
+                  <IconExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                December 2024
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Built an agentic document summarizer powered by Beloga&apos;s
+                  core technology
+                </li>
+                <li>
+                  Implemented comprehensive summarization that ensures no
+                  important details are missed
+                </li>
+                <li>
+                  Designed for knowledge workers to quickly digest and
+                  understand complex documents
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://github.com/lws803/gigachadgpt"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  GigaChadGPT
+                  <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                December 2023
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Developed a ChatGPT-based persona through prompt engineering
+                </li>
+                <li>
+                  Created an engaging conversational AI for fitness and
+                  lifestyle advice
+                </li>
+                <li>Achieved 50+ DAUs on the platform</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://github.com/lws803/next-use-warmroutes"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  next-use-warmroutes
+                  <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                May 2023
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Built a Next.js hook to control serverless/SSR route warm-up
+                  timing
+                </li>
+                <li>
+                  Helps developers prevent cold starts by pre-warming routes
+                  based on user navigation patterns
+                </li>
+                <li>Published as an npm package with 6 stars on GitHub</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://github.com/lws803/soul"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  Soul
+                  <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                January 2023
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Built a social media authentication and relationships service
+                  using NestJS and MySQL
+                </li>
+                <li>
+                  Implemented user connections and reputation system with full
+                  test coverage
+                </li>
+                <li>Achieved 17 stars on GitHub</li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://github.com/lws803/Crime-detect"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  Crime-detect
+                  <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                January 2019
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Built a real-time surveillance system to detect weapons and
+                  aggressive behavior using computer vision
+                </li>
+                <li>
+                  Implemented weapon detection using ML and motion analysis with
+                  Optical Flow
+                </li>
+                <li>
+                  Achieved 18 stars and 10 forks on GitHub, developed during
+                  HackAndRoll2019
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://github.com/lws803/BLE-jammer"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  Bluetooth Low Energy Jammer
+                  <IconBrandGithubFilled className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                December 2022
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Built a BLE jammer using NRF240L+ modules and Maple Mini
+                  (STM32)
+                </li>
+                <li>Achieved 170 stars on GitHub</li>
+                <li>Was able to jam up to 100m of BLE communications</li>
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
