@@ -4,12 +4,18 @@ import {
   IconBrandLinkedinFilled,
   IconFileDownload,
   IconExternalLink,
+  IconChevronDown,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { YouTubeEmbed } from "@next/third-parties/google";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 // TODO: Also the AR VR project stuff
 
@@ -395,7 +401,7 @@ export default function Home() {
                   target="_blank"
                   className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
                 >
-                  Crime-detect
+                  Crime Detect
                   <IconBrandGithubFilled className="ml-2 h-4 w-4" />
                 </Link>
               </CardTitle>
@@ -501,6 +507,80 @@ export default function Home() {
               Culture
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Testimonials</h2>
+        <div className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                Julio Olivera
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Staff Engineer at Constructor • March 2024
+              </p>
+            </CardHeader>
+            <CardContent>
+              <Collapsible>
+                <div className="space-y-4 text-sm text-gray-600 dark:text-gray-400">
+                  <p>
+                    Where to begin! I have had the pleasure of working with
+                    Wilson for years. After so much time it&apos;s hard to
+                    narrow down a recommendation, but I think it all comes from
+                    Wilson&apos;s focus on building useful things and delivering
+                    value.
+                  </p>
+                  <p>
+                    One way this manifests is on Wilson&apos;s focus on
+                    understanding user needs and the overall business / market
+                    context in order to prioritize and propose solutions.
+                  </p>
+                  <CollapsibleContent>
+                    <p>
+                      Another very important way this also shows up is on
+                      Wilson&apos;s flexibility when it comes to technical
+                      areas. I&apos;ve seen him work on core backend services,
+                      new APIs, complex UIs and anything in between. His focus
+                      is always on building great solutions that deliver value,
+                      regardless of where in the technology stack that might be.
+                      This is not easy at all.
+                    </p>
+                    <p>
+                      I consider myself fortunate to have worked with Wilson
+                      these past few years and certainly look forward to cross
+                      paths again!
+                    </p>
+                  </CollapsibleContent>
+                </div>
+                <CollapsibleTrigger className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 mt-2">
+                  <span>See more</span>
+                  <IconChevronDown className="h-4 w-4" />
+                </CollapsibleTrigger>
+              </Collapsible>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                Eli Finkelshteyn
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Founder and CEO at Constructor • February 2024
+              </p>
+            </CardHeader>
+            <CardContent>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Wilson was a talented engineer at Constructor and was
+                consistently a high performer within the organization. I highly
+                valued his contributions. I&apos;m confident he&apos;ll be
+                successful in his future roles.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
