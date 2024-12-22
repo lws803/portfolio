@@ -241,12 +241,12 @@ export default function Home() {
             <p className="text-gray-600 dark:text-gray-400">
               2nd Place • July 2018 • San Diego, USA
             </p>
-            <div className="mt-4 max-w-lg">
+            <div className="mt-4">
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                 Watch our autonomous submarine pick up golf balls underwater in
                 a small bin using computer vision and precise controls.
               </p>
-              <div className="relative mb-6">
+              <div className="relative w-full mb-4">
                 <YouTubeEmbed videoid="8sUCNCQCBGI" />
               </div>
             </div>
