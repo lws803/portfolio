@@ -5,6 +5,7 @@ import {
   IconFileDownload,
   IconExternalLink,
   IconChevronDown,
+  IconBrandX,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import { YouTubeEmbed } from "@next/third-parties/google";
@@ -51,11 +52,11 @@ export default function Home() {
         </div>
 
         {/* Social Links */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+        <div className="flex flex-wrap gap-4 mt-4">
           <Button
             variant="outline"
             asChild
-            className="w-full sm:w-auto justify-center"
+            className="sm:w-auto justify-center"
           >
             <Link href="https://github.com/lws803" target="_blank">
               <IconBrandGithubFilled className="mr-2 h-4 w-4" /> GitHub
@@ -64,7 +65,7 @@ export default function Home() {
           <Button
             variant="outline"
             asChild
-            className="w-full sm:w-auto justify-center"
+            className="sm:w-auto justify-center"
           >
             <Link href="https://linkedin.com/in/wilsonler" target="_blank">
               <IconBrandLinkedinFilled className="mr-2 h-4 w-4" /> LinkedIn
@@ -73,7 +74,16 @@ export default function Home() {
           <Button
             variant="outline"
             asChild
-            className="w-full sm:w-auto justify-center"
+            className="sm:w-auto justify-center"
+          >
+            <Link href="https://x.com/LerWilson" target="_blank">
+              <IconBrandX className="mr-2 h-4 w-4" /> Twitter
+            </Link>
+          </Button>
+          <Button
+            variant="outline"
+            asChild
+            className="sm:w-auto justify-center"
           >
             <Link href="/resume.pdf" target="_blank">
               <IconFileDownload className="mr-2 h-4 w-4" /> Resume
