@@ -26,7 +26,7 @@ export default function Home() {
         <div className="flex flex-col">
           <div className="flex items-start gap-6 mb-4">
             <Image
-              src="/square.png"
+              src="/images/square.png"
               alt="Wilson Ler"
               width={124}
               height={124}
@@ -112,92 +112,158 @@ export default function Home() {
         </h2>
         <div className="space-y-8">
           <div>
-            <h3 className="text-xl font-semibold">Technical Co-founder</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
-              <Link
-                href="https://www.beloga.xyz/"
-                target="_blank"
-                className="hover:text-[#3859FF] transition-colors"
-              >
-                Beloga
-              </Link>{" "}
-              • February 2024 - Present • San Francisco Bay Area
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>
-                Launched 2nd Product of the Day on Product Hunt with 6-month
-                MVP.
-              </li>
-              <li>
-                Scaled to $3K MRR and 400 MAUs with 3hr daily user engagement.
-              </li>
-              <li>Built multi-source RAG platform with personalization.</li>
-            </ul>
+            <div className="flex items-start gap-4">
+              <Link href="https://www.beloga.xyz/" target="_blank">
+                <Image
+                  src="/images/beloga-logo.png"
+                  alt="Beloga Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-lg object-contain hover:opacity-80 transition-opacity"
+                />
+              </Link>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold">Technical Co-founder</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  <Link
+                    href="https://www.beloga.xyz/"
+                    target="_blank"
+                    className="hover:text-[#3859FF] transition-colors"
+                  >
+                    Beloga
+                  </Link>{" "}
+                  • February 2024 - Present • San Francisco Bay Area
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                  <li>
+                    Launched 2nd Product of the Day on Product Hunt with 6-month
+                    MVP.
+                  </li>
+                  <li>
+                    Scaled to $3K MRR and 400 MAUs with 3hr daily user
+                    engagement.
+                  </li>
+                  <li>Built multi-source RAG platform with personalization.</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Technical Consultant</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
-              <Link
-                href="https://www.breakthelove.com/"
-                target="_blank"
-                className="hover:text-[#3859FF] transition-colors"
-              >
-                Break Sports
-              </Link>{" "}
-              • June 2024 - August 2024 • New York (Remote)
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>Restructured engineering team and hired 4 engineers.</li>
-              <li>
-                Reduced technical debt by 20% through architectural
-                improvements.
-              </li>
-            </ul>
+            <div className="flex items-start gap-4">
+              <Link href="https://www.breakthelove.com/" target="_blank">
+                <Image
+                  src="/images/break-the-love-logo.png"
+                  alt="Break the Love Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-lg object-contain border border-black dark:border-white hover:opacity-80 transition-opacity"
+                />
+              </Link>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold">Technical Consultant</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  <Link
+                    href="https://www.breakthelove.com/"
+                    target="_blank"
+                    className="hover:text-[#3859FF] transition-colors"
+                  >
+                    Break Sports
+                  </Link>{" "}
+                  • June 2024 - August 2024 • New York (Remote)
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                  <li>Restructured engineering team and hired 4 engineers.</li>
+                  <li>
+                    Reduced technical debt by 20% through architectural
+                    improvements.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Engineering Manager</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
+            <div className="flex items-start gap-4">
               <Link
                 href="https://constructor.com/"
                 target="_blank"
-                className="hover:text-[#3859FF] transition-colors"
+                className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:opacity-80 transition-opacity"
               >
-                Constructor
-              </Link>{" "}
-              • August 2021 - February 2024 • Remote
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>Led quiz platform development for e-commerce experiences.</li>
-              <li>
-                Reduced onboarding time by 30% with improved hiring processes.
-              </li>
-              <li>
-                Achieved 80% error coverage with Sentry auto-assignment system.
-              </li>
-            </ul>
+                <Image
+                  src="/images/constructor-logo.jpeg"
+                  alt="Constructor Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-lg object-contain"
+                />
+              </Link>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold">Engineering Manager</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  <Link
+                    href="https://constructor.com/"
+                    target="_blank"
+                    className="hover:text-[#3859FF] transition-colors"
+                  >
+                    Constructor
+                  </Link>{" "}
+                  • August 2021 - February 2024 • Remote
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                  <li>
+                    Led quiz platform development for e-commerce experiences.
+                  </li>
+                  <li>
+                    Reduced onboarding time by 30% with improved hiring
+                    processes.
+                  </li>
+                  <li>
+                    Achieved 80% error coverage with Sentry auto-assignment
+                    system.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">Software Engineer</h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-2">
+            <div className="flex items-start gap-4">
               <Link
                 href="https://constructor.com/"
                 target="_blank"
-                className="hover:text-[#3859FF] transition-colors"
+                className="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:opacity-80 transition-opacity"
               >
-                Constructor
-              </Link>{" "}
-              • August 2019 - August 2021 • Remote
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
-              <li>Early engineer scaling valuation from $50M to $550M.</li>
-              <li>Increased API documentation engagement by 50%.</li>
-              <li>
-                Reduced indexing time by 50% through redirect optimization.
-              </li>
-              <li>
-                Implemented multilingual search for French, Dutch, and English.
-              </li>
-            </ul>
+                <Image
+                  src="/images/constructor-logo.jpeg"
+                  alt="Constructor Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-lg object-contain"
+                />
+              </Link>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold">Software Engineer</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">
+                  <Link
+                    href="https://constructor.com/"
+                    target="_blank"
+                    className="hover:text-[#3859FF] transition-colors"
+                  >
+                    Constructor
+                  </Link>{" "}
+                  • August 2019 - August 2021 • Remote
+                </p>
+                <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+                  <li>Early engineer scaling valuation from $50M to $550M.</li>
+                  <li>Increased API documentation engagement by 50%.</li>
+                  <li>
+                    Reduced indexing time by 50% through redirect optimization.
+                  </li>
+                  <li>
+                    Implemented multilingual search for French, Dutch, and
+                    English.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -207,32 +273,59 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-4 text-[#3859FF]">Education</h2>
         <div className="space-y-6">
           <div>
-            <h3 className="text-xl font-semibold">Stanford University</h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Exchange Student • 2019
-            </p>
-            <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400">
-              <li>Completed CS229 Machine Learning course</li>
-              <li>
-                Part of NUS Overseas Colleges Silicon Valley program (Batch 36)
-              </li>
-            </ul>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center">
+                <Image
+                  src="/images/stanford-logo.png"
+                  alt="Stanford Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-lg object-contain"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold">Stanford University</h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Exchange Student • 2019
+                </p>
+                <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400">
+                  <li>Completed CS229 Machine Learning course</li>
+                  <li>
+                    Part of NUS Overseas Colleges Silicon Valley program (Batch
+                    36)
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div>
-            <h3 className="text-xl font-semibold">
-              National University of Singapore
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400">
-              Bachelor of Engineering in Computer Engineering • 2017 - 2021
-            </p>
-            <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400">
-              <li>Honors Graduate</li>
-              <li>Minor in NUS Overseas Colleges (Entrepreneurship)</li>
-              <li>
-                Focus areas: Information Retrieval, Natural Language Processing
-                (NLP)
-              </li>
-            </ul>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center">
+                <Image
+                  src="/images/nus-logo.png"
+                  alt="NUS Logo"
+                  width={48}
+                  height={48}
+                  className="rounded-lg object-contain"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-semibold">
+                  National University of Singapore
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Bachelor of Engineering in Computer Engineering • 2017 - 2021
+                </p>
+                <ul className="list-disc list-inside mt-2 text-gray-600 dark:text-gray-400">
+                  <li>Honors Graduate</li>
+                  <li>Minor in NUS Overseas Colleges (Entrepreneurship)</li>
+                  <li>
+                    Focus areas: Information Retrieval, Natural Language
+                    Processing (NLP)
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -275,7 +368,7 @@ export default function Home() {
                 Watch our autonomous submarine pick up golf balls underwater in
                 a small bin using computer vision and precise controls.
               </p>
-              <div className="relative w-full mb-4">
+              <div className="relative w-full mb-4 rounded-lg overflow-hidden">
                 <YouTubeEmbed videoid="8sUCNCQCBGI" />
               </div>
             </div>
@@ -519,6 +612,39 @@ export default function Home() {
                 <li>
                   Developed using Unity and C# to create interactive virtual lab
                   experiences
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl font-semibold">
+                <Link
+                  href="https://cs229.stanford.edu/proj2019aut/data/assignment_308832_raw/26608523.pdf"
+                  target="_blank"
+                  className="hover:text-gray-600 dark:hover:text-gray-400 inline-flex items-center"
+                >
+                  CCTV Anomaly Detection
+                  <IconExternalLink className="ml-2 h-4 w-4" />
+                </Link>
+              </CardTitle>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                2019 • Under Prof. Andrew Ng
+              </p>
+            </CardHeader>
+            <CardContent>
+              <ul className="list-disc list-inside space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                <li>
+                  Implemented and tested CNN models for visual anomaly detection
+                </li>
+                <li>
+                  Achieved over 90% accuracy in detecting golf carts using the
+                  UCSD Anomaly Detection Dataset
+                </li>
+                <li>
+                  Developed under Stanford&apos;s machine learning course
+                  (CS229)
                 </li>
               </ul>
             </CardContent>
