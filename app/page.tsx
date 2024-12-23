@@ -114,59 +114,88 @@ export default function Home() {
           <div>
             <h3 className="text-xl font-semibold">Technical Co-founder</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-2">
-              Beloga • February 2024 - Present • Toronto, Ontario (On-site)
+              <Link
+                href="https://www.beloga.xyz/"
+                target="_blank"
+                className="hover:text-[#3859FF] transition-colors"
+              >
+                Beloga
+              </Link>{" "}
+              • February 2024 - Present • San Francisco Bay Area
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
               <li>
-                Built an MVP in 6 months and launched 2nd Product of the day on
-                Product Hunt
+                Launched 2nd Product of the Day on Product Hunt with 6-month
+                MVP.
               </li>
               <li>
-                Lead product development and technical architecture from 0 to 1
+                Scaled to $3K MRR and 400 MAUs with 3hr daily user engagement.
               </li>
-              <li>Scaled revenue from $0 - $3K MRR and 400 MAUs</li>
+              <li>Built multi-source RAG platform with personalization.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold">Technical Consultant</h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-2">
+              <Link
+                href="https://www.breakthelove.com/"
+                target="_blank"
+                className="hover:text-[#3859FF] transition-colors"
+              >
+                Break Sports
+              </Link>{" "}
+              • June 2024 - August 2024 • New York (Remote)
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+              <li>Restructured engineering team and hired 4 engineers.</li>
               <li>
-                Built the platform using multi-source RAG with personalization
+                Reduced technical debt by 20% through architectural
+                improvements.
               </li>
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-semibold">Engineering Manager</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-2">
-              Constructor • August 2021 - February 2024 • San Francisco,
-              California (Remote)
+              <Link
+                href="https://constructor.com/"
+                target="_blank"
+                className="hover:text-[#3859FF] transition-colors"
+              >
+                Constructor
+              </Link>{" "}
+              • August 2021 - February 2024 • Remote
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+              <li>Led quiz platform development for e-commerce experiences.</li>
               <li>
-                Founded and led a team of full-stack engineers to build a quiz
-                platform for e-commerce guided experiences
+                Reduced onboarding time by 30% with improved hiring processes.
               </li>
               <li>
-                Streamlined hiring pipeline with new processes and buddy system,
-                reducing onboarding time by 30%
-              </li>
-              <li>
-                Led development of customer merchandizing tools that increased
-                clickthrough rates
+                Achieved 80% error coverage with Sentry auto-assignment system.
               </li>
             </ul>
           </div>
           <div>
             <h3 className="text-xl font-semibold">Software Engineer</h3>
             <p className="text-gray-600 dark:text-gray-400 mb-2">
-              Constructor • August 2019 - August 2021 • San Francisco,
-              California (On-site)
+              <Link
+                href="https://constructor.com/"
+                target="_blank"
+                className="hover:text-[#3859FF] transition-colors"
+              >
+                Constructor
+              </Link>{" "}
+              • August 2019 - August 2021 • Remote
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-400">
+              <li>Early engineer scaling valuation from $50M to $550M.</li>
+              <li>Increased API documentation engagement by 50%.</li>
               <li>
-                Scaled Constructor from a valuation of $50M to $550M as an early
-                engineer
+                Reduced indexing time by 50% through redirect optimization.
               </li>
               <li>
-                Developed configuration interfaces for customer catalog data
-              </li>
-              <li>
-                Implemented dynamic synonyms and multilingual search detection
+                Implemented multilingual search for French, Dutch, and English.
               </li>
             </ul>
           </div>
